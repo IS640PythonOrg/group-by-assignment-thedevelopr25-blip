@@ -18,7 +18,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Python Autograder test
-        setup-command: pip install pandas mkdir -p tests echo -e "category,total\nBooks,75\nClothing,135\nElectronics,505"
+        setup-command: pip install pandas && mkdir -p tests && echo -e "category,total\nBooks,75\nClothing,135\nElectronics,505"
           > tests/expected_output.csv
         command: python tests/test_script.py
         timeout: 10
