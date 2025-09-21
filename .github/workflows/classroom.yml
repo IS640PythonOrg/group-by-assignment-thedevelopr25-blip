@@ -20,7 +20,7 @@ jobs:
         test-name: Python Autograder test
         setup-command: pip install pandas && mkdir -p tests && echo -e "category,total\nBooks,75\nClothing,135\nElectronics,505"
           > tests/expected_output.csv
-        command: python tests/test_script.py
+        command: python tests/test_script.py tests/input.csv test/results.csv
         timeout: 10
         max-score: 100
     - name: Autograding Reporter
